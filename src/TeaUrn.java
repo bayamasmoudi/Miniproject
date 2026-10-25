@@ -1,6 +1,6 @@
-package teaurnrush;
 
-public class TeaUrnRush {
+
+public class TeaUrn {
 
     // Brute force: simulate minute by minute.
     // Each minute, pour one cup from each of the two drinks with the most cups left.
@@ -16,7 +16,7 @@ public class TeaUrnRush {
                     first = i;
                 }
             }
-            // a different drink with the second most cups left (if any)
+            
             int second = -1;
             for (int i = 0; i < 3; i++) {
                 if (i != first && left[i] > 0) {
@@ -34,7 +34,6 @@ public class TeaUrnRush {
         return minutes;
     }
 
-    // Optimized: formula.
     public static int optimized(int[] orders) {
         int total = orders[0] + orders[1] + orders[2];
         int largest = Math.max(orders[0], Math.max(orders[1], orders[2]));
@@ -44,7 +43,7 @@ public class TeaUrnRush {
 
     public static void main(String[] args) {
         int[] orders = {3, 5, 1};
-        System.out.println(brute(orders) + " " + optimized(orders)); // 5 5
+        System.out.println(brute(orders) + " " + optimized(orders)); 
  }
 
 }

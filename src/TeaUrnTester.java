@@ -1,4 +1,4 @@
-package teaurnrush;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,8 +25,8 @@ public class TeaUrnTester {
                 }
             } else if (line.startsWith("expect:")) {
                 int expected = Integer.parseInt(line.substring(7).trim());
-                int b = TeaUrnRush.brute(orders);
-                int o = TeaUrnRush.optimized(orders);
+                int b = TeaUrn.brute(orders);
+                int o = TeaUrn.optimized(orders);
                 total++;
 
                 if (b == expected && o == expected) {

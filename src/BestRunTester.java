@@ -1,10 +1,10 @@
-package foodtruck;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class FoodTruckTester {
+public class BestRunTester {
 
     public static void main(String[] args) throws FileNotFoundException {
         String fileName = "tests/3B_large.txt";
@@ -27,10 +27,10 @@ public class FoodTruckTester {
                 // on ignore les tags
             } else if (line.startsWith("expect:")) {
                 int expected = Integer.parseInt(line.substring(7).trim());
-                int o = FoodTruck.optimized(input);
+                int o = BestRun.optimized(input);
                 int b = expected;
                 if (runBrute) {
-                    b = FoodTruck.brute(input);
+                    b = BestRun.brute(input);
                 }
                 total++;
 

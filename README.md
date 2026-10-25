@@ -13,12 +13,15 @@
 
 ## Project structure
 
-- src/teaurnrush/ : TeaUrnRush.java (solutions), TeaUrnTester.java (tester)
-- src/foodtruck/ : FoodTruck.java (solutions), FoodTruckTester.java (tester)
-- src/rooftopPuddles/ : RooftopPuddles.java (solutions), RooftopPuddlesTester.java (tester)
+All files are in the default package and follow the format of the
+starter/ files in the student kit: same class names, same method names
+and parameters, one file per problem.
+
+- src/TeaUrn.java : 1A solutions, src/TeaUrnTester.java : 1A tester
+- src/BestRun.java : 3B solutions, src/BestRunTester.java : 3B tester
+- src/RooftopPuddles.java : 1C solutions, src/RooftopPuddlesTester.java : 1C tester
 - tests/ : test files from the student kit
 - screenshots/ : screenshots of the test runs
-
 
 ## 1A Tea Urn Rush (Easy)
 
@@ -40,13 +43,14 @@ bounds can always be reached.
 - Time: O(1)
 - Space: O(1)
 
----
+
 
 ## 3B Food Truck's Best Run (Medium)
 
 *Brute force: try every streak.*
 For every starting day, extend the streak one day at a time while keeping
 a running sum, and remember the best sum seen.
+
 - Time: O(n²)
 - Space: O(1)
 
@@ -60,7 +64,7 @@ every day is a loss.
 - Time: O(n)
 - Space: O(1)
 
----
+
 
 ## 1C Rooftop Puddles (Hard)
 
@@ -68,10 +72,12 @@ every day is a loss.
 The water above building i is min(tallest on the left, tallest on the right) - heights[i].
 For each building, scan the whole left side and the whole right side to
 find these two maximums.
+
+
 - Time: O(n²)
 - Space: O(1)
 
-*Intermediate idea (not submitted):* precompute leftMax[] and
+Intermediate idea (not submitted): precompute leftMax[] and
 rightMax[] arrays in two passes. This gives O(n) time but uses O(n)
 extra space.
 
@@ -88,7 +94,7 @@ This improves on the intermediate idea by using constant space.
 
 ## How to run the tests
 
-1. Open a tester class (TeaUrnTester, FoodTruckTester or RooftopPuddlesTester).
+1. Open a tester class (TeaUrnTester, BestRunTester or RooftopPuddlesTester).
 2. Right-click, then *Run As → Java Application*.
 3. The console prints PASS or FAIL for each case, then the total.
 

@@ -1,8 +1,8 @@
-package rooftopPuddles;
+
 
 public class RooftopPuddles {
 	
-	// Brute force: for each building, scan left and right for the tallest walls.
+	
     public static int brute(int[] heights) {
         int water = 0;
         for (int i = 0; i < heights.length; i++) {
@@ -51,7 +51,7 @@ public class RooftopPuddles {
 
     public static void main(String[] args) {
         int[] heights = {3, 0, 2, 0, 4, 1, 2};
-        System.out.println(brute(heights) + " " + optimized(heights)); // 8 8
+        System.out.println(brute(heights) + " " + optimized(heights)); 
     }
 }
 	

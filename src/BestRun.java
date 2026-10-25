@@ -1,6 +1,6 @@
-package foodtruck;
 
-public class FoodTruck {
+
+public class BestRun {
 		
 		// Brute force: try every starting day, extend the streak one day at a time.
 	    public static int brute(int[] profit) {
